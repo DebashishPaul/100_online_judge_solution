@@ -43,16 +43,24 @@ Sample Output 1
 
 '''
 
-x = int(input())
-y = int(input())
-z = int(input())
-n = int(input())
-print("[",end="")
-for list1 in range(0,x+1):
-	for list2 in range(0,y+1):
-		for list3 in range(0,z+1):
-			if list1+list2+list3 != n:
+# x = int(input())
+# y = int(input())
+# z = int(input())
+# n = int(input())
+# print("[",end="")
+# for list1 in range(0,x+1):
+# 	for list2 in range(0,y+1):
+# 		for list3 in range(0,z+1):
+# 			if list1+list2+list3 != n:
 				
-				print([list1,list2,list3],end=",")
+# 				print([list1,list2,list3],end=",")
 				
-print("]")	
+# print("]")	
+
+X = int(raw_input())
+Y = int(raw_input())
+Z = int(raw_input())
+N = int(raw_input())
+
+ans = [[i, j, k] for i in range(X + 1) for j in range(Y + 1) for k in range(Z + 1) if i + j + k != N]
+print ans
