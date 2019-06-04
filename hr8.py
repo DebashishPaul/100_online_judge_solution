@@ -37,8 +37,10 @@ if __name__ == '__main__':
     arr = list(map(int, input().split(" ")))
     k=max(arr)
     for i in range(len(arr)):
-    	if arr[i-1]==k:
+    	if max(arr)==k:
     		arr.remove(max(arr))
+
+    
     arr.sort()
     p=max(arr)
     print(p)
