@@ -25,8 +25,20 @@ Given list is 2 3 6 6 5. The maximum score is 6, second maximum is 5. Hence, we 
 
 
 
-x=[2,3,6,6,5]
-y=set(x)
-print(y)
-y.remove(max(y))
-print(max(y))
+# x=[2,3,6,6,5]
+# y=set(x)
+# print(y)
+# y.remove(max(y))
+# print(max(y))
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split(" ")))
+    k=max(arr)
+    for i in range(len(arr)):
+    	if arr[i-1]==k:
+    		arr.remove(max(arr))
+    arr.sort()
+    p=max(arr)
+    print(p)
